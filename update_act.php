@@ -2,7 +2,7 @@
 	include "kon.inc.php";
 
 
-    if( isset( $_POST['update'] ) ){/** A trigger that execute after clicking the submit     button **/
+    if( isset( $_POST['update'] ) ){/** A trigger that execute after clicking the update button **/
  
 	$id_users = $_POST['id_users'];
     $jenis_users=$_POST['jenis_users'];

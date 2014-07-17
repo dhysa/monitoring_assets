@@ -47,7 +47,7 @@ session_start();
                         </li>
                         <li class="divider"></li>
 -->
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="logout_act.inc.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                 </li>
@@ -58,12 +58,11 @@ session_start();
                     <ul class="nav" id="side-menu">
                         <li class="sidebar-search">
                             <br/>
+                            <?php echo "ID anda: ". $_SESSION[ 'id_users']; ?>
                             <br/>
-                            <br/>
-
                         </li>
                         <li>
-                            <a href="profile_users.php"><i class="glyphicon glyphicon-user fa-fw"></i> My Profile</a>
+                            <a href="profile_users_de.php"><i class="glyphicon glyphicon-user fa-fw"></i> My Profile</a>
                         </li>
 
 <!--

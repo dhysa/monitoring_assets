@@ -123,7 +123,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-2 control-label">Cabang </label>
                                     <div class="col-sm-10">
-                                        <p class="form-control-static"><?php echo $_SESSION['nama_users']; ?></p>
+                                        <p class="form-control-static">not work yet</p>
                                     </div>
                                 </div>
                                 <div class="form-group">

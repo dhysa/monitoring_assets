@@ -1,0 +1,40 @@
+<table class="table">
+                        <thead>
+                            <tr>
+                                <th><center>Tier</center></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                               <?php
+                                                    include "kon.inc.php"; 
+                                                    $ambil=mysql_query("SELECT nama_tier FROM tier");
+                                                    while($data=mysql_fetch_array($ambil))
+                                                    {
+                                                    echo"<tr><td><center>
+                                                    $data[nama_tier]</center></td></tr>";
+                                                    }
+                                ?>
+                           </tbody>
+                    </table>
+                    
+//Creating a new record (createAction)
+	else if($_GET["action"] == "create")
+	
+	{
+		// $result = mysql_query("INSERT INTO people(Name, Age, RecordDate) VALUES('" . $_POST["Name"] . "', " . $_POST["Age"] . ",now());");
+		$result = mysql_query("INSERT INTO users(jenis_users,nama_users,pass_users) VALUES('" . $_POST["nama_users"] . "', 
+		 " . $_POST["jenis_users"] . ", " . $_POST["nama_users"] . ", " . $_POST["pass_users"] . ",now());");
+		// Insert record into database
+		
+		// Get last inserted record (to return to jTable)
+		$result = mysql_query("SELECT * FROM users WHERE id_users = LAST_INSERT_ID() ;");
+		$row = mysql_fetch_array($result);
+
+		// Return result to jTable
+		$jTableResult = array();
+		$jTableResult['Result'] = "OK";
+		$jTableResult['Record'] = $row;
+		print json_encode($jTableResult);
+	}
+    
+    ===================================================create users cabang ====================================

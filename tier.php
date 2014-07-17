@@ -16,7 +16,19 @@
     <link href="css/sb-admin.css" rel="stylesheet">
     <!--    jTable      -->
     <link href="scripts/jtable/themes/metro/blue/jtable.min.css" rel="stylesheet" type="text/css" />
-	<link href="themes/redmond/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css" />
+    <link href="themes/redmond/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/morris/raphael-2.1.0.min.js"></script>
+    <script src="js/plugins/morris/morris.js"></script>
+    <script src="js/sb-admin.js"></script>
+    <script src="js/demo/dashboard-demo.js"></script>
+    <!--    jTable      -->
+    <script src="scripts/jquery-1.6.4.min.js" type="text/javascript"></script>
+    <script src="scripts/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+    <script src="Scripts/jtable/jquery.jtable.js" type="text/javascript"></script>
 
 </head>
 
@@ -68,17 +80,17 @@
                             <a href="profile_users.php"><i class="glyphicon glyphicon-user fa-fw"></i> My Profile</a>
                         </li>
                         <li>
-                            <a href="create_users.php"><i class="glyphicon glyphicon-pencil fa-fw"></i> Create User</span></a>
+                            <a href="create_users.php"><i class="glyphicon glyphicon-pencil fa-fw"></i> Users </span></a>
 
                         </li>
                         <li>
-                            <a href="forms.html"><i class="glyphicon glyphicon-th-large fa-fw"></i> Assets Standard</a>
+                            <a href="assets_standard.php"><i class="glyphicon glyphicon-th-large fa-fw"></i> Assets Standard</a>
                         </li>
                         <li>
-                            <a href="#"><i class="glyphicon glyphicon-home fa-fw"></i> Cabang<span class="fa arrow"></span></a>
+                            <a href="cabang.php"><i class="glyphicon glyphicon-home fa-fw"></i> Cabang<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#">Tier</a>
+                                    <a href="tier.php">Tier</a>
                                 </li>
 
                             </ul>
@@ -104,7 +116,7 @@
                         </div>
 
                         <div class="panel-body">
-                            <div id="TierTable" style="width: 200px;"></div>
+                            <div id="TierTable" style="width: 300px;"></div>
                             <script type="text/javascript">
                                 $(document).ready(function () {
 
@@ -132,7 +144,7 @@
                                         }
                                     });
 
-                                    //Load Tier list from server
+                                    //Load person list from server
                                     $('#TierTable').jtable('load');
 
                                 });
@@ -175,17 +187,6 @@
         </div>
     </div>
 
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="js/plugins/morris/raphael-2.1.0.min.js"></script>
-    <script src="js/plugins/morris/morris.js"></script>
-    <script src="js/sb-admin.js"></script>
-    <script src="js/demo/dashboard-demo.js"></script>
-    <!--    jTable      -->
-    <script src="scripts/jquery-1.6.4.min.js" type="text/javascript"></script>
-    <script src="scripts/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
-    <script src="Scripts/jtable/jquery.jtable.js" type="text/javascript"></script>
 </body>
 
 </html>

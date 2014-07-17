@@ -40,12 +40,7 @@
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="logout_act.inc.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                 </li>
@@ -61,22 +56,6 @@
                         </li>
                         <li>
                             <a href="profile_users.php"><i class="glyphicon glyphicon-user fa-fw"></i> My Profile</a>
-                        </li>
-                        <li>
-                            <a href="create_users.php"><i class="glyphicon glyphicon-pencil fa-fw"></i> Create User</span></a>
-
-                        </li>
-                        <li>
-                            <a href="forms.html"><i class="glyphicon glyphicon-th-large fa-fw"></i> Assets Standard</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="glyphicon glyphicon-home fa-fw"></i> Cabang<span class="fa arrow"></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="tier.php">Tier</a>
-                                </li>
-                            </ul>
-
                         </li>
                     </ul>
                 </div>
@@ -100,54 +79,44 @@
                         <div class="panel-body">
                             <!-- panel-body -->
 
-                            <form class="form-horizontal" role="form" action="update_act.php" method="post">
-                                <!--form input users-->
+                            <form class="form-horizontal" role="form" action="update_users.php" method="post">
+                                <!--form tampilkan user-->
                                 <div class="form-group">
-                                    <label for="jenis_users_label" class="col-sm-2 control-label">ID Users</label>
+                                    <label class="col-sm-2 control-label">ID User</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="id_users" placeholder="Please, input your ID!">
+                                        <p class="form-control-static">
+                                            <?php echo $_SESSION[ 'id_users']; ?>
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="jenis_users_label" class="col-sm-2 control-label">Update Jenis Users</label>
+                                    <label class="col-sm-2 control-label">Nama User</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="jenis_users" placeholder=<?php echo $_SESSION[ 'jenis_users']; ?>>
+                                        <p class="form-control-static">
+                                            <?php echo $_SESSION[ 'nama_users']; ?>
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="nama_users_label" class="col-sm-2 control-label">Update Nama Users</label>
+                                    <label class="col-sm-2 control-label">Jenis User</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="nama_users" placeholder="<?php echo $_SESSION['nama_users']; ?>">
+                                        <p class="form-control-static">
+                                            <?php echo $_SESSION[ 'jenis_users']; ?>
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="nama_users_label" class="col-sm-2 control-label">Cabang</label>
+                                    <label class="col-sm-2 control-label">Cabang</label>
                                     <div class="col-sm-10">
-                                        <select class="form-control">
-                                            <option>
-                                                <option>
-                                                    <?php include "kon.inc.php"; 
-                                                    $ambil=mysql_query( "SELECT nama_cabang FROM cabang");                                                                                   while($data=mysql_fetch_array($ambil)) 
-                                                    { echo "<option value=$data[nama_cabang]>
-                                                    $data[nama_cabang]</option>"; } ?>
-                                                </option>
-                                            </option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="Passwords" class="col-sm-2 control-label">Update Password</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="pass_users" placeholder="Password">
+                                        <p class="form-control-static">not work yet</p>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-sm-offset-2 col-sm-10">
-                                        <input class="btn btn-default" type="submit" name="update" value="Update">
+                                        <button type="submit" class="btn btn-default">Update</button>
                                     </div>
                                 </div>
                             </form>
-                           
                         </div>
 
                     </div>
