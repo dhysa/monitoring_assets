@@ -33,80 +33,9 @@
 </head>
 
 <body>
-    <?php include "kon.inc.php"; ?>
-
-    <div id="wrapper">
-
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="dash_admin.php">Data Entry Dashboard</a>
-            </div>
-
-            <ul class="nav navbar-top-links navbar-right">
-
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li><a href="logout_act.inc.php"><i class="fa fa-sign-out fa-fw"  ></i> Logout</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-
-            <div class="navbar-default navbar-static-side" role="navigation">
-                <div class="sidebar-collapse">
-                    <ul class="nav" id="side-menu">
-                        <li class="sidebar-search">
-                            <br/>
-                            <?php echo "ID anda: ". $_SESSION[ 'id_users']; ?>
-                            <br/>
-                        </li>
-                       <li>
-                            <a href="profile_users.php"><i class="glyphicon glyphicon-user fa-fw"></i> My Profile</a>
-                        </li>
-                        <li>
-                            <a href="create_users.php"><i class="glyphicon glyphicon-pencil fa-fw"></i> Create User</span></a>
-
-                        </li>
-                        <li>
-                            <a href="assets_standard.php"><i class="glyphicon glyphicon-th-large fa-fw"></i> Assets Standard</a>
-                        </li>
-                        <li>
-                            <a href="cabang.php"><i class="glyphicon glyphicon-home fa-fw"></i> Cabang<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="tier.php">Tier</a>
-                                </li>
-                            </ul>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="agreement.php">Agreement</a>
-                                </li>
-                            </ul>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="rental.php">Rental</a>
-                                </li>
-                            </ul>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="tier.php">Record Payment</a>
-                                </li>
-                            </ul>
-
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+   <?php 
+    include "kon.inc.php"; 
+    include "navbar.inc.php";?>
 
         <div id="page-wrapper">
             <div class="row">
@@ -242,7 +171,6 @@
                 </div>
             </div>
         </div>
-    </div>
 
 </body>
 

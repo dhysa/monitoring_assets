@@ -70,31 +70,44 @@
                             <?php echo "ID anda: ". $_SESSION[ 'id_users']; ?>
                             <br/>
                         </li>
-                        <li>
+                            <li>
                             <a href="profile_users.php"><i class="glyphicon glyphicon-user fa-fw"></i> My Profile</a>
                         </li>
                         <li>
-                            <a href="create_users.php"><i class="glyphicon glyphicon-pencil fa-fw"></i> Users</span></a>
+                            <a href="create_users.php"><i class="glyphicon glyphicon-pencil fa-fw"></i> Create User</span></a>
 
                         </li>
                         <li>
                             <a href="assets_standard.php"><i class="glyphicon glyphicon-th-large fa-fw"></i> Assets Standard</a>
                         </li>
                         <li>
-                            <a href="cabang.php"><i class="glyphicon glyphicon-home fa-fw"></i> Cabang<span class="fa arrow"></a>
+                            <a href="cabang.php"><i class="glyphicon glyphicon-home fa-fw"></i> Cabang<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="tier.php">Tier</a>
                                 </li>
                             </ul>
-                                <ul class="nav nav-second-level">
+                            <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="tier.php">Rental</a>
+                                    <a href="agreement.php">Agreement</a>
                                 </li>
                             </ul>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="tier.php">Record Payment</a>
+                                    <a href="rental.php">Rental</a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#">Contract Info. <span class="fa arrow"></a>
+                                    <ul class="nav nav-third-level collapse in" style="height: auto;">
+                                        <li>
+                                            <a href="#">Fee Record</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Payment Record</a>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
 
