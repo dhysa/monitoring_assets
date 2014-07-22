@@ -57,6 +57,9 @@
                         <li>
                             <a href="profile_users.php"><i class="glyphicon glyphicon-user fa-fw"></i> My Profile</a>
                         </li>
+                        <li>
+                            <a href="assets_cabang.php"><i class="glyphicon glyphicon-user fa-fw"></i> Assets Cabang</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -73,7 +76,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <!-- panel-heading -->
-                            <i class="glyphicon glyphicon-pencil fa-fw"></i> Create Users
+                            <i class="glyphicon glyphicon-pencil fa-fw"></i> Users
                         </div>
 
                         <div class="panel-body">

@@ -46,7 +46,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Admin Dashboard</a>
+                <a class="navbar-brand" href="dash_admin.php">Admin Dashboard</a>
             </div>
 
             <ul class="nav navbar-top-links navbar-right">
@@ -85,6 +85,16 @@
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="tier.php">Tier</a>
+                                </li>
+                            </ul>
+                                <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="tier.php">Rental</a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="tier.php">Record Payment</a>
                                 </li>
                             </ul>
 
@@ -186,11 +196,9 @@
                                     <label for="nama_users_label" class="col-sm-2 control-label">Cabang</label>
                                     <div class="col-sm-10">
                                         <select class="form-control">
-                                            <option>
-                                                <?php include "kon.inc.php"; $ambil=mysql_query( "SELECT nama_cabang FROM cabang"); while($data=mysql_fetch_array($ambil)) { echo "<option value=$data[nama_cabang]>
+                                            <option selected>Silahkan pilih salah satu</option>
+                                                <?php $ambil=mysql_query( "SELECT id_cabang, nama_cabang FROM cabang"); while($data=mysql_fetch_array($ambil)) { echo "<option value=$data[id_cabang]>
                                                     $data[nama_cabang]</option>"; } ?>
-
-                                            </option>
                                         </select>
                                     </div>
                                 </div>

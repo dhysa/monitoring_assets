@@ -45,7 +45,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="dash_admin.php">Admin Dashboard</a>
+                <a class="navbar-brand" href="dash_admin.php">Data Entry Dashboard</a>
             </div>
 
             <ul class="nav navbar-top-links navbar-right">
@@ -70,32 +70,10 @@
                             <br/>
                         </li>
                         <li>
-                            <a href="profile_users.php"><i class="glyphicon glyphicon-user fa-fw"></i> My Profile</a>
+                            <a href="profile_users_de.php"><i class="glyphicon glyphicon-user fa-fw"></i> My Profile</a>
                         </li>
                         <li>
-                            <a href="create_users.php"><i class="glyphicon glyphicon-pencil fa-fw"></i> Users</span></a>
-
-                        </li>
-                        <li>
-                            <a href="assets_standard.php"><i class="glyphicon glyphicon-th-large fa-fw"></i> Assets Standard</a>
-                        </li>
-                        <li>
-                            <a href="cabang.php"><i class="glyphicon glyphicon-home fa-fw"></i> Cabang<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="tier.php">Tier</a>
-                                </li>
-                            </ul>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="tier.php">Rental</a>
-                                </li>
-                            </ul>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="tier.php">Record Payment</a>
-                                </li>
-                            </ul>
+                            <a href="assets_standard.php"><i class="glyphicon glyphicon-th-large fa-fw"></i> Assets Cabang</a>
                         </li>
                     </ul>
                 </div>
@@ -186,46 +164,48 @@
       <div class="panel-body">
        
           <body>
-    <div id="Asstand" style="width: 900px;"></div>
+     <div id="AsCab" style="width: 1000px;"></div>
     <script type="text/javascript">
         $(document).ready(function () {
 
             //Prepare jTable
-            $('#Asstand').jtable({
-                title: 'ASSET STANDARD',
+            $('#AsCab').jtable({
+                title: 'ASSET CABANG',
                 actions: {
-                    listAction: 'asstand_crud.php?action=list',
+                    listAction: 'ascab_crud.php?action=list',
                     //createAction: 'user_crud.php?action=create',
-                    //updateAction: 'asstand_crud.php?action=update',
-                    deleteAction: 'asstand_crud.php?action=delete'
+                    //updateAction: 'user_crud.php?action=update',
+                    deleteAction: 'user_crud.php?action=delete'
                 },
                 fields: {
-                    id_assets_standard: {
-                        title: 'ID Assets Standard',
+                    
+                    id_assets: {
+                        title: 'ID asset',
                         width: '20%',
-                        key: true,
+                        key: true
+                        
+                    },
+                    nama_assets: {
+                        title: 'Nama Assets',
+                        width: '20%'
+                        //key: true
                         //create: false,
-                        edit: false
-                        //list: false
+                        //edit: false
+                        // list: false
                     },
-                    nama_assets_standard: {
-                        title: 'Nama Assets Standard',
-                        width: '40%'
-                    },
-                    jumlah_assets_standard: {
-                        title: 'Jumlah Assets Standard',
-                        width: '30%'
-                    },
-                    nama_tier: {
-                        title: 'Tier',
+                    jumlah_assets: {
+                        title: 'Jumlah Assets',
                         width: '20%'
                     },
-
+                    id_assets_standard: {
+                        title: 'ID Assets Standard',
+                        width: '20%'
+                    },
                 }
             });
 
             //Load person list from server
-            $('#Asstand').jtable('load');
+            $('#AsCab').jtable('load');
 
         });
     </script>
@@ -238,41 +218,41 @@
     <div class="panel-heading">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-          Input Asset Standard
+          Input Asset Cabang
         </a>
       </h4>
     </div>
     <div id="collapseThree" class="panel-collapse collapse">
       <div class="panel-body">
-        <form class="form-horizontal" role="form" action="asstand_submit.php" method="post">
+        <form class="form-horizontal" role="form" action="ascab_submit.php" method="post">
                                 <!--form input users-->
                                 <div class="form-group">
-                                    <label for="id_users_label" class="col-sm-2 control-label">ID Asset Standar</label>
+                                    <label for="id_users_label" class="col-sm-2 control-label">ID Asset </label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="id_assets_standard" placeholder="ID Asset Standar">
+                                        <input type="text" class="form-control" name="id_assets" placeholder="ID Asset">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="jenis_users_label" class="col-sm-2 control-label">Nama Assets Standar</label>
+                                    <label for="jenis_users_label" class="col-sm-2 control-label">Nama Assets </label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="nama_assets_standard" placeholder="Nama Assets Standar">
+                                        <input type="text" class="form-control" name="nama_assets_standard" placeholder="Nama Assets">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="jenis_users_label" class="col-sm-2 control-label">Jumlah Assets Standard</label>
+                                    <label for="jenis_users_label" class="col-sm-2 control-label">Jumlah Assets </label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="jumlah_assets_standard" placeholder="Jumlah Assets Standard">
+                                     <input type="text" class="form-control" name="jumlah_assets_standard" placeholder="Jumlah Assets">
                                     </div>
                                 </div>                                                                
                                     <div class="form-group">
-                                    <label for="nama_users_label" class="col-sm-2 control-label">Tier</label>
+                                    <label for="nama_users_label" class="col-sm-2 control-label">ID Assets Standard</label>
                                     <div class="col-sm-10">
-                                        <select name="id_tier" class="form-control">
+                                        <select name="id_assets_standard" class="form-control">
                                             <option>Silahkan pilih satu. </option>
-                                                <?php $ambil=mysql_query( "SELECT id_tier,nama_tier FROM tier");
+                                                <?php $ambil=mysql_query( "SELECT id_assets_standard FROM assets_standard");
                                                     while($data=mysql_fetch_array($ambil)) 
-                                                    { echo "<option value=$data[id_tier]>
-                                                    $data[nama_tier]</option>"; } ?>                                    
+                                                    { echo "<option value=$data[id_assets_standard]>
+                                                    $data[id_assets_standard]</option>"; } ?>                                    
                                         </select>
                                     </div>
                                 </div>

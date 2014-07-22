@@ -30,7 +30,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Admin Dashboard</a>
+                <a class="navbar-brand" href="dash_admin.php">Admin Dashboard</a>
             </div>
 
             <ul class="nav navbar-top-links navbar-right">
@@ -70,7 +70,21 @@
                                 <li>
                                     <a href="tier.php">Tier</a>
                                 </li>
-								
+                            </ul>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="agreement.php">Agreement</a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="rental.php">Rental</a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="tier.php">Record Payment</a>
+                                </li>
                             </ul>
 
                         </li>

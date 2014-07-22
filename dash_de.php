@@ -32,7 +32,7 @@ session_start();
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Data Entry Dashboard</a>
+                <a class="navbar-brand" href="dash_de.php">Data Entry Dashboard</a>
             </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
@@ -40,13 +40,6 @@ session_start();
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-<!--
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
--->
                         <li><a href="logout_act.inc.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
@@ -64,18 +57,9 @@ session_start();
                         <li>
                             <a href="profile_users_de.php"><i class="glyphicon glyphicon-user fa-fw"></i> My Profile</a>
                         </li>
-
-<!--
                         <li>
-                            <a href="#"><i class="glyphicon glyphicon-home fa-fw"></i> Cabang<span class="fa arrow"></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="#">Tier</a>
-                                </li>
-                            </ul>
-
+                            <a href="assets_cabang.php"><i class="glyphicon glyphicon-user fa-fw"></i> Asset Cabang</a>
                         </li>
--->
 
                     </ul>
                 </div>

@@ -30,7 +30,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Admin Dashboard</a>
+                <a class="navbar-brand" href="dash_admin.php">Admin Dashboard</a>
             </div>
 
             <ul class="nav navbar-top-links navbar-right">
@@ -63,20 +63,29 @@
                             <a href="profile_users.php"><i class="glyphicon glyphicon-user fa-fw"></i> My Profile</a>
                         </li>
                         <li>
-                            <a href="create_users.php"><i class="glyphicon glyphicon-pencil fa-fw"></i> Create User</span></a>
+                            <a href="create_users.php"><i class="glyphicon glyphicon-pencil fa-fw"></i> Users</span></a>
 
                         </li>
                         <li>
                             <a href="forms.html"><i class="glyphicon glyphicon-th-large fa-fw"></i> Assets Standard</a>
                         </li>
                         <li>
-                            <a href="#"><i class="glyphicon glyphicon-home fa-fw"></i> Cabang<span class="fa arrow"></a>
+                            <a href="cabang.php"><i class="glyphicon glyphicon-home fa-fw"></i> Cabang<span class="fa arrow"></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="tier.php">Tier</a>
                                 </li>
                             </ul>
-
+                                <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="tier.php">Rental</a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="tier.php">Record Payment</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>

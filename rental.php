@@ -45,7 +45,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="dash_admin.php">Admin Dashboard</a>
+                <a class="navbar-brand" href="dash_admin.php">Data Entry Dashboard</a>
             </div>
 
             <ul class="nav navbar-top-links navbar-right">
@@ -69,11 +69,11 @@
                             <?php echo "ID anda: ". $_SESSION[ 'id_users']; ?>
                             <br/>
                         </li>
-                        <li>
+                       <li>
                             <a href="profile_users.php"><i class="glyphicon glyphicon-user fa-fw"></i> My Profile</a>
                         </li>
                         <li>
-                            <a href="create_users.php"><i class="glyphicon glyphicon-pencil fa-fw"></i> Users</span></a>
+                            <a href="create_users.php"><i class="glyphicon glyphicon-pencil fa-fw"></i> Create User</span></a>
 
                         </li>
                         <li>
@@ -88,7 +88,12 @@
                             </ul>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="tier.php">Rental</a>
+                                    <a href="agreement.php">Agreement</a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="rental.php">Rental</a>
                                 </li>
                             </ul>
                             <ul class="nav nav-second-level">
@@ -96,6 +101,7 @@
                                     <a href="tier.php">Record Payment</a>
                                 </li>
                             </ul>
+
                         </li>
                     </ul>
                 </div>
@@ -112,73 +118,12 @@
                 <div class="col-lg-12">
                     <!--      Collapse              -->
                     <div class="panel-group" id="accordion">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Table Gabungan Asset Cabang dan Assets Standard
-        </a>
-        </h4>
-                            </div>
-                            <div id="collapseOne" class="panel-collapse collapse in">
-                                <div class="panel-body">
-                                    <div id="UserTable" style="width: 1000px;"></div>
-    <script type="text/javascript">
-        $(document).ready(function () {
-
-            //Prepare jTable
-            $('#UserTable').jtable({
-                title: 'ASSET GABUNGAN',
-                actions: {
-                    listAction: 'assets_gab_crud.php?action=list'
-                    //createAction: 'user_crud.php?action=create',
-                    //updateAction: 'user_crud.php?action=update',
-                    //deleteAction: 'user_crud.php?action=delete'
-                },
-                fields: {
-                    
-                    nama_tier: {
-                        title: 'Tier',
-                        width: '20%',
-                        key: true
-                        
-                    },
-                    nama_assets: {
-                        title: 'Nama Assets',
-                        width: '20%',
-                        //key: true
-                        //create: false,
-                        //edit: false
-                        // list: false
-                    },
-                    jumlah_assets: {
-                        title: 'Jumlah Assets',
-                        width: '20%'
-                    },
-                    nama_assets_standard: {
-                        title: 'Asset Standard',
-                        width: '20%'
-                    },
-                    jumlah_assets_standard: {
-                        title: 'Jumlah Assets Standard',
-                        width: '30%'
-                    },
-                }
-            });
-
-            //Load person list from server
-            $('#UserTable').jtable('load');
-
-        });
-    </script>
-                                </div>
-                            </div>
-                        </div>
-                        
+                                              
                         <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-          Table Assets Standard
+          Rental Record
         </a>
       </h4>
     </div>
@@ -186,46 +131,64 @@
       <div class="panel-body">
        
           <body>
-    <div id="Asstand" style="width: 900px;"></div>
+     <div id="rental" style="width: 1000px;"></div>
     <script type="text/javascript">
         $(document).ready(function () {
 
             //Prepare jTable
-            $('#Asstand').jtable({
-                title: 'ASSET STANDARD',
+            $('#rental').jtable({
+                title: 'RENTAL TABLE',
                 actions: {
-                    listAction: 'asstand_crud.php?action=list',
+                    listAction: 'rental_crud.php?action=list',
                     //createAction: 'user_crud.php?action=create',
-                    //updateAction: 'asstand_crud.php?action=update',
-                    deleteAction: 'asstand_crud.php?action=delete'
+                    //updateAction: 'user_crud.php?action=update',
+                    deleteAction: 'rental_crud.php?action=delete'
                 },
                 fields: {
-                    id_assets_standard: {
-                        title: 'ID Assets Standard',
-                        width: '20%',
-                        key: true,
+                    
+                    id_rental: {
+                        title: 'ID rental',
+                        width: 'auto',
+                        key: true
+                        
+                    },
+                    jenis_rental: {
+                        title: 'Jenis',
+                        width: 'auto'
+                        //key: true
                         //create: false,
-                        edit: false
-                        //list: false
+                        //edit: false
+                        // list: false
                     },
-                    nama_assets_standard: {
-                        title: 'Nama Assets Standard',
-                        width: '40%'
+                    size_rental: {
+                        title: 'Size (m2)',
+                        width: 'auto'
                     },
-                    jumlah_assets_standard: {
-                        title: 'Jumlah Assets Standard',
-                        width: '30%'
+                    note_rental: {
+                        title: 'Size (m2)',
+                        width: 'auto'
                     },
-                    nama_tier: {
-                        title: 'Tier',
-                        width: '20%'
+                    deed_no: {
+                        title: 'Deed No.',
+                        width: 'auto'
                     },
-
+                    date_agreements: {
+                        title: 'Date Agreement',
+                        width: 'auto'
+                    },
+                    remarks: {
+                        title: 'Remarks Agreement',
+                        width: 'auto'
+                    },
+                    fee_remarks: {
+                        title: 'Remarks Fee',
+                        width: 'auto'
+                    },
                 }
             });
 
             //Load person list from server
-            $('#Asstand').jtable('load');
+            $('#rental').jtable('load');
 
         });
     </script>
@@ -238,44 +201,50 @@
     <div class="panel-heading">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-          Input Asset Standard
+          Input Rental Record
         </a>
       </h4>
     </div>
     <div id="collapseThree" class="panel-collapse collapse">
       <div class="panel-body">
-        <form class="form-horizontal" role="form" action="asstand_submit.php" method="post">
+        <form class="form-horizontal" role="form" action="rental_submit.php" method="post">
                                 <!--form input users-->
                                 <div class="form-group">
-                                    <label for="id_users_label" class="col-sm-2 control-label">ID Asset Standar</label>
+                                    <label for="id_users_label" class="col-sm-2 control-label">ID Rental </label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="id_assets_standard" placeholder="ID Asset Standar">
+                                        <input type="text" class="form-control" name="id_rental" placeholder="ID Rental">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="jenis_users_label" class="col-sm-2 control-label">Nama Assets Standar</label>
+                                    <label for="jenis_users_label" class="col-sm-2 control-label">Jenis </label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="nama_assets_standard" placeholder="Nama Assets Standar">
+                                        <input type="text" class="form-control" name="jenis_rental" placeholder="Jenis Rental">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="jenis_users_label" class="col-sm-2 control-label">Jumlah Assets Standard</label>
+                                    <label for="jenis_users_label" class="col-sm-2 control-label">Size </label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" name="jumlah_assets_standard" placeholder="Jumlah Assets Standard">
+                                     <input type="text" class="form-control" name="size_rental" placeholder="Size">
                                     </div>
                                 </div>                                                                
                                     <div class="form-group">
-                                    <label for="nama_users_label" class="col-sm-2 control-label">Tier</label>
+                                    <label for="nama_users_label" class="col-sm-2 control-label">Agreement</label>
                                     <div class="col-sm-10">
-                                        <select name="id_tier" class="form-control">
-                                            <option>Silahkan pilih satu. </option>
-                                                <?php $ambil=mysql_query( "SELECT id_tier,nama_tier FROM tier");
+                                        <select name="id_agreement" class="form-control">
+                                            <option>Deed No./Date </option>
+                                                <?php $ambil=mysql_query( "SELECT id_agreement,deed_no,date_agreements FROM agreements");
                                                     while($data=mysql_fetch_array($ambil)) 
-                                                    { echo "<option value=$data[id_tier]>
-                                                    $data[nama_tier]</option>"; } ?>                                    
+                                                    { echo "<option value=$data[id_agreement]>
+                                                    $data[deed_no]/$data[date_agreements]</option>"; } ?>                                    
                                         </select>
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <label for="jenis_users_label" class="col-sm-2 control-label">Notes </label>
+                                    <div class="col-sm-10">
+                                     <textarea name="note_rental" class="form-control" rows="3"></textarea>
+                                    </div>
+                                </div> 
 
                                 <div class="form-group">
                                     <div class="col-sm-offset-2 col-sm-10">

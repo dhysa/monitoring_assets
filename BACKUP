@@ -37,4 +37,37 @@
 		print json_encode($jTableResult);
 	}
     
-    ===================================================create users cabang ====================================
+    =======================================================================================
+		// Updating a record (updateAction)
+	else if($_GET["action"] == "update")
+	{
+		// Update record in database
+		$result = mysql_query("UPDATE users SET nama_users= '".$_POST["nama_users"]."' ,	
+                                                jenis_users= '".$_POST["jenis_users"]."' ,                                                                                               
+												pass_users=  '".$_POST["pass_users"]."'  
+                                                WHERE id_users = '".$_POST["id_users"]."' ;");
+
+		// Return result to jTable
+		$jTableResult = array();
+		$jTableResult['Result'] = "OK";
+		print json_encode($jTableResult);
+	}
+    
+	// Deleting a record (deleteAction)
+	else if($_GET["action"] == "delete")
+	{
+		// Delete from database
+        $result = mysql_query("DELETE FROM users WHERE id_users = '".$_POST["id_users"]."' ;");
+
+		// Return result to jTable
+		$jTableResult = array();
+		$jTableResult['Result'] = "OK";
+		print json_encode($jTableResult);
+	}
+	
+	echo $row['A'] . " " . $row['B']. " " . $row['C']. " " . $row['D']. " " . $row['C']; 
+            
+            echo "<br>";
+==================================================================================================
+
+ 
